@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position += new Vector3(direction.x * speed, direction.y * speed, 0);
+        transform.position += new Vector3(direction.x * speed, direction.y * speed, 0) * Time.deltaTime;
     }
 
     public void Move(InputAction.CallbackContext context)
